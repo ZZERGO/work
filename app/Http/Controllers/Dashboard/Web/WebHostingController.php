@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard\Web;
 use App\Models\Web\WebHosting;
 use Illuminate\Http\Request;
 
-class WebHostingController extends Controller
+class WebHostingController extends BaseWebController
 {
     /**
      * Display a listing of the resource.

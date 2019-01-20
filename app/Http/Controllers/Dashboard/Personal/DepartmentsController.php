@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard\Personal;
 
-use App\Models\Country;
+use App\Models\Departments;
 use Illuminate\Http\Request;
 
-class CountryController extends Controller
+class DepartmentsController extends BasePersonalController
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CountryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Country  $country
+     * @param  \App\Models\Departments  $departments
      * @return \Illuminate\Http\Response
      */
-    public function show(Country $country)
+    public function show(Departments $departments)
     {
         //
     }
@@ -52,10 +52,10 @@ class CountryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Country  $country
+     * @param  \App\Models\Departments  $departments
      * @return \Illuminate\Http\Response
      */
-    public function edit(Country $country)
+    public function edit(Departments $departments)
     {
         //
     }
@@ -64,10 +64,10 @@ class CountryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Country  $country
+     * @param  \App\Models\Departments  $departments
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Country $country)
+    public function update(Request $request, Departments $departments)
     {
         //
     }
@@ -75,10 +75,10 @@ class CountryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Country  $country
+     * @param  \App\Models\Departments  $departments
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Country $country)
+    public function destroy(Departments $departments)
     {
         //
     }

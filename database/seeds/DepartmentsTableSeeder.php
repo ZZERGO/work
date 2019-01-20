@@ -14,23 +14,23 @@ class DepartmentsTableSeeder extends Seeder
         $departments = [
             [
                 'name' => 'АУП',
-                'alias' => 'managers',
+                'slug' => 'managers',
             ],
             [
                 'name' => 'Отдел кадров',
-                'alias' => 'personal',
+                'slug' => 'personal',
             ],
             [
                 'name' => 'MTO',
-                'alias' => 'mto',
+                'slug' => 'mto',
             ],
             [
                 'name' => 'Упраление проектами',
-                'alias' => 'oup',
+                'slug' => 'oup',
             ],
             [
                 'name' => 'Юристы',
-                'alias' => 'yurists',
+                'slug' => 'yurists',
             ]
         ];
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Blog;
 use App\Models\Blog\BlogCategory;
 use Illuminate\Http\Request;
 
-class BlogCategoryController extends Controller
+class BlogCategoryController extends BaseBlogController
 {
     /**
      * Display a listing of the resource.

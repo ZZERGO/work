@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard\Web;
 use App\Models\Web\WebDomain;
 use Illuminate\Http\Request;
 
-class WebDomainController extends Controller
+class DomainController extends BaseWebController
 {
     /**
      * Display a listing of the resource.
