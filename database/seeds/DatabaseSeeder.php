@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CountryTableSeeder::class);
         $this->call(BlogCategoryTableSeeder::class);
+        $this->call(DepartmentsTableSeeder::class);
         $this->call(UsersTableSeeder::class);
+        factory(\App\Models\Blog\BlogPost::class, 20)->create();
     }
 }
