@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(\App\Models\Blog\BlogPost::class, function (Faker $faker) {
 
-    $faker = \Faker\Factory::create('ru_RU');
+    //$faker = \Faker\Factory::create('ru_RU');
 
     $title = $faker->sentence(6, true);
     $isPublished = rand(0, 1);
