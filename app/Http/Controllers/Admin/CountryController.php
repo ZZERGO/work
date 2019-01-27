@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Blog;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Blog\BlogCategory;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
-class BlogCategoryController extends BaseBlogController
+class CountryController extends BaseAdminController
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class BlogCategoryController extends BaseBlogController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function show(BlogCategory $blogCategory)
+    public function show(Country $country)
     {
         //
     }
@@ -52,10 +52,10 @@ class BlogCategoryController extends BaseBlogController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function edit(BlogCategory $blogCategory)
+    public function edit(Country $country)
     {
         //
     }
@@ -64,10 +64,10 @@ class BlogCategoryController extends BaseBlogController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BlogCategory $blogCategory)
+    public function update(Request $request, Country $country)
     {
         //
     }
@@ -75,10 +75,10 @@ class BlogCategoryController extends BaseBlogController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogCategory $blogCategory)
+    public function destroy(Country $country)
     {
         //
     }

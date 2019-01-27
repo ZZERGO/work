@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Blog;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Blog\BlogPost;
+use App\Models\Department;
 use Illuminate\Http\Request;
 
-class BlogPostController extends BaseBlogController
+class DepartmentController extends BaseAdminController
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class BlogPostController extends BaseBlogController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function show(BlogPost $blogPost)
+    public function show(Department $department)
     {
         //
     }
@@ -52,10 +52,10 @@ class BlogPostController extends BaseBlogController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function edit(BlogPost $blogPost)
+    public function edit(Department $department)
     {
         //
     }
@@ -64,10 +64,10 @@ class BlogPostController extends BaseBlogController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BlogPost $blogPost)
+    public function update(Request $request, Department $department)
     {
         //
     }
@@ -75,10 +75,10 @@ class BlogPostController extends BaseBlogController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  \App\Models\Department  $department
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogPost $blogPost)
+    public function destroy(Department $department)
     {
         //
     }

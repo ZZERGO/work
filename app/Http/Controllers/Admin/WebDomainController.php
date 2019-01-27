@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard\Personal;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Department;
+use App\Models\Web\WebDomain;
 use Illuminate\Http\Request;
 
-class DepartmentsController extends BasePersonalController
+class WebDomainController extends BaseAdminController
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class DepartmentsController extends BasePersonalController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Department  $departments
+     * @param  \App\Models\Web\WebDomain  $webDomain
      * @return \Illuminate\Http\Response
      */
-    public function show(Department $departments)
+    public function show(WebDomain $webDomain)
     {
         //
     }
@@ -52,10 +52,10 @@ class DepartmentsController extends BasePersonalController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Department  $departments
+     * @param  \App\Models\Web\WebDomain  $webDomain
      * @return \Illuminate\Http\Response
      */
-    public function edit(Department $departments)
+    public function edit(WebDomain $webDomain)
     {
         //
     }
@@ -64,10 +64,10 @@ class DepartmentsController extends BasePersonalController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Department  $departments
+     * @param  \App\Models\Web\WebDomain  $webDomain
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Department $departments)
+    public function update(Request $request, WebDomain $webDomain)
     {
         //
     }
@@ -75,10 +75,10 @@ class DepartmentsController extends BasePersonalController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Department  $departments
+     * @param  \App\Models\Web\WebDomain  $webDomain
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Department $departments)
+    public function destroy(WebDomain $webDomain)
     {
         //
     }
