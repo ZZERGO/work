@@ -14,7 +14,7 @@ class UserController extends BaseAdminController
      */
     public function index()
     {
-        //
+        echo "админка USERS";
     }
 
     /**
@@ -24,7 +24,7 @@ class UserController extends BaseAdminController
      */
     public function create()
     {
-        //
+        echo 'админка - форма создания пользователя';
     }
 
     /**
@@ -46,7 +46,7 @@ class UserController extends BaseAdminController
      */
     public function show(User $user)
     {
-        //
+        echo 'админка - показываем данные пользователя';
     }
 
     /**
@@ -57,7 +57,7 @@ class UserController extends BaseAdminController
      */
     public function edit(User $user)
     {
-        //
+        echo 'админка - страница редактирования пользователя';
     }
 
     /**

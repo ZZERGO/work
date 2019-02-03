@@ -18,12 +18,21 @@ Route::group(
     [
         'namespace' => 'Admin',
         'prefix' => 'admin',
-        'as' => 'AdminPanel'
+        'as' => 'admin.'
     ],
     function(){
-        Route::get('', 'IndexController@index');
-        Route::group(['prefix' => 'users', 'as' => 'Users'], function (){
 
+        // Главная страница админки
+        Route::get('', 'IndexController@index')->name('Main');
+
+        // Управление пользователями
+        Route::group(['prefix' => 'users', 'as' => 'users.'], function (){
+            Route::resource('', 'UserController');
+        });
+
+        // Управление доменами
+        Route::group(['prefix' => 'domains', 'as' => 'domains.'], function (){
+           Route::resource('', 'WebDomainController');
         });
 
 

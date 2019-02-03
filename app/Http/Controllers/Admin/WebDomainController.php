@@ -14,7 +14,7 @@ class WebDomainController extends BaseAdminController
      */
     public function index()
     {
-        //
+        echo 'управление доменами - главная';
     }
 
     /**
@@ -24,7 +24,7 @@ class WebDomainController extends BaseAdminController
      */
     public function create()
     {
-        //
+        echo 'Управление доменами - форма создания домена';
     }
 
     /**
@@ -35,7 +35,7 @@ class WebDomainController extends BaseAdminController
      */
     public function store(Request $request)
     {
-        //
+        echo 'правление доменами - сохранение';
     }
 
     /**
@@ -46,7 +46,7 @@ class WebDomainController extends BaseAdminController
      */
     public function show(WebDomain $webDomain)
     {
-        //
+        echo 'уравление доменами - показать информацию о домене' . $webDomain;
     }
 
     /**
@@ -57,7 +57,7 @@ class WebDomainController extends BaseAdminController
      */
     public function edit(WebDomain $webDomain)
     {
-        //
+        echo 'управление доменаи - форма редактирования домена' . $webDomain;
     }
 
     /**
@@ -69,7 +69,7 @@ class WebDomainController extends BaseAdminController
      */
     public function update(Request $request, WebDomain $webDomain)
     {
-        //
+        echo 'управление доменами - обовление информации в БД';
     }
 
     /**
@@ -80,6 +80,6 @@ class WebDomainController extends BaseAdminController
      */
     public function destroy(WebDomain $webDomain)
     {
-        //
+        echo 'управление доменами - удаление записис о домене из БД';
     }
 }
