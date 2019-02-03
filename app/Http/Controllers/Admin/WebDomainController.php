@@ -46,7 +46,7 @@ class WebDomainController extends BaseAdminController
      */
     public function show(WebDomain $webDomain)
     {
-        echo 'уравление доменами - показать информацию о домене' . $webDomain;
+        echo 'уравление доменами - показать информацию о домене' . $webDomain->name;
     }
 
     /**

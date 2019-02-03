@@ -23,17 +23,25 @@ Route::group(
     function(){
 
         // Главная страница админки
-        Route::get('', 'IndexController@index')->name('Main');
+        Route::get('/', 'IndexController@index')->name('Main');
 
         // Управление пользователями
-        Route::group(['prefix' => 'users', 'as' => 'users.'], function (){
-            Route::resource('', 'UserController');
-        });
+        Route::resource('user', 'UserController');
 
         // Управление доменами
-        Route::group(['prefix' => 'domains', 'as' => 'domains.'], function (){
-           Route::resource('', 'WebDomainController');
-        });
+        Route::resource('domain','WebDomainController');
+
+        // Управление хостингами
+        Route::resource('hosting', 'WebHostingController');
+
+        // Управление вебсайтами
+        Route::resource('website', 'WebSiteController');
+
+        // Управление странами
+        Route::resource('country', 'CountryController');
+
+        // Управление департаментами (отделами)
+        Route::resource('department', 'DepartmentController');
 
 
 });

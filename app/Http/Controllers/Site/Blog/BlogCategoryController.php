@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Site\Blog;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class UserController extends BaseAdminController
+class BlogCategoryController extends BaseBlogController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class UserController extends BaseAdminController
      */
     public function index()
     {
-        echo "админка USERS";
+        //
     }
 
     /**
@@ -24,7 +23,7 @@ class UserController extends BaseAdminController
      */
     public function create()
     {
-        echo 'админка - форма создания пользователя';
+        //
     }
 
     /**
@@ -41,33 +40,33 @@ class UserController extends BaseAdminController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Blog\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(BlogCategory $blogCategory)
     {
-        echo 'админка - показываем данные пользователя' . ' - ' .$user->name;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Blog\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(BlogCategory $blogCategory)
     {
-        echo 'админка - страница редактирования пользователя' . ' - ' .$user->name;
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Blog\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, BlogCategory $blogCategory)
     {
         //
     }
@@ -75,10 +74,10 @@ class UserController extends BaseAdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\Models\Blog\BlogCategory  $blogCategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(BlogCategory $blogCategory)
     {
         //
     }

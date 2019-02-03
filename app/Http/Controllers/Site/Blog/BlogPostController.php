@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Site\Blog;
 
-use App\Models\Web\WebSite;
 use Illuminate\Http\Request;
 
-class WebsiteController extends BaseAdminController
+class BlogPostController extends BaseBlogController
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +40,10 @@ class WebsiteController extends BaseAdminController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  \App\Models\Blog\BlogPost  $blogPost
      * @return \Illuminate\Http\Response
      */
-    public function show(WebSite $webSite)
+    public function show(BlogPost $blogPost)
     {
         //
     }
@@ -52,10 +51,10 @@ class WebsiteController extends BaseAdminController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  \App\Models\Blog\BlogPost  $blogPost
      * @return \Illuminate\Http\Response
      */
-    public function edit(WebSite $webSite)
+    public function edit(BlogPost $blogPost)
     {
         //
     }
@@ -64,10 +63,10 @@ class WebsiteController extends BaseAdminController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  \App\Models\Blog\BlogPost  $blogPost
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WebSite $webSite)
+    public function update(Request $request, BlogPost $blogPost)
     {
         //
     }
@@ -75,10 +74,10 @@ class WebsiteController extends BaseAdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  \App\Models\Blog\BlogPost  $blogPost
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WebSite $webSite)
+    public function destroy(BlogPost $blogPost)
     {
         //
     }
