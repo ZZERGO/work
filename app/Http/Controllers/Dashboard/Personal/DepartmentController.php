@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard\Personal;
 use App\Models\Department;
 use Illuminate\Http\Request;
 
-class DepartmentsController extends BasePersonalController
+class DepartmentController extends BasePersonalController
 {
     /**
      * Display a listing of the resource.

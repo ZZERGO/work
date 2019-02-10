@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Personal;
 
-use App\Http\Controllers\Admin\BaseAdminController;
-use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class UserController extends BaseAdminController
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class UserController extends BaseAdminController
      */
     public function index()
     {
-        echo "админка USERS";
-        echo '</BR>' . __METHOD__;
+        //
     }
 
     /**
@@ -26,8 +24,7 @@ class UserController extends BaseAdminController
      */
     public function create()
     {
-        echo 'админка - форма создания пользователя';
-        echo '</BR>' . __METHOD__;
+        //
     }
 
     /**
@@ -44,35 +41,33 @@ class UserController extends BaseAdminController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        echo 'админка - показываем данные пользователя' . ' - ' .$user->name;
-        echo '</BR>' . __METHOD__;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        echo 'админка - страница редактирования пользователя' . ' - ' .$user->name;
-        echo '</BR>' . __METHOD__;
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -80,10 +75,10 @@ class UserController extends BaseAdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
         //
     }

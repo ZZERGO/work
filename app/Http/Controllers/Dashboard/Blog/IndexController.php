@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Dashboard\Blog;
 
 
-class PostController extends BaseController
+class IndexController extends BaseController
 {
-    //
+    public function index()
+    {
+        echo 'DASHBOARD - Управление блогом - Главная ';
+    }
 }

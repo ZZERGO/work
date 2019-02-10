@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Personal;
+namespace App\Http\Controllers\Dashboard\Personal;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class CountryController extends Controller
+class UserController extends BasePersonalController
 {
     /**
      * Display a listing of the resource.

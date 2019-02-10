@@ -60,6 +60,38 @@ Route::group(
                 // управление хостингами
                 Route::resource('hostings', 'HostingController');
             });
+
+        // Управление персоналом (пользователи, отделы, страны, должности)
+        Route::group(
+            [
+                'namespace' => 'Personal',
+                'as' => 'personal.',
+                'prefix' => 'personal'
+            ],
+            function ()
+            {
+                Route::get('/', 'IndexController@index')->name('main');
+                Route::resource('users', 'UserController');
+                Route::resource('countries', 'CountryController');
+                Route::resource('departments', 'DepartmentController');
+                Route::resource('positions', 'PositionController');
+            });
+
+        // Управление блогом
+        Route::group(
+            [
+                'namespace' => 'Blog',
+                'as' => 'blog.',
+                'prefix' => 'blog'
+            ],
+            function ()
+            {
+                Route::get('/', 'IndexController@index')->name('main');
+                Route::resource('categories', 'CategoryController');
+                Route::resource('posts', 'PostController');
+
+            }
+        );
     });
 
 // Маршруты для админки
@@ -75,22 +107,22 @@ Route::group(
         Route::get('/', 'IndexController@index')->name('Main');
 
         // Управление пользователями
-        Route::resource('user', 'UserController');
+        Route::resource('users', 'Personal\UserController');
 
         // Управление доменами
-        Route::resource('domains','WebDomainController');
+        Route::resource('domains','Web\DomainController');
 
         // Управление хостингами
-        Route::resource('hostings', 'WebHostingController');
+        Route::resource('hostings', 'Web\HostingController');
 
         // Управление вебсайтами
-        Route::resource('sites', 'WebSiteController');
+        Route::resource('sites', 'Web\SiteController');
 
         // Управление странами
-        Route::resource('country', 'CountryController');
+        Route::resource('country', 'Personal\CountryController');
 
         // Управление департаментами (отделами)
-        Route::resource('departments', 'DepartmentController');
+        Route::resource('departments', 'Personal\DepartmentController');
 
         // Управление блогом
         Route::group(

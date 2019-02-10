@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Personal;
 
-use App\Http\Controllers\Admin\BaseAdminController;
-use App\Models\Department;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class DepartmentController extends BaseAdminController
+class DepartmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,10 +41,10 @@ class DepartmentController extends BaseAdminController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Department  $department
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Department $department)
+    public function show($id)
     {
         //
     }
@@ -53,10 +52,10 @@ class DepartmentController extends BaseAdminController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Department  $department
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Department $department)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +64,10 @@ class DepartmentController extends BaseAdminController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Department  $department
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Department $department)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +75,10 @@ class DepartmentController extends BaseAdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Department  $department
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Department $department)
+    public function destroy($id)
     {
         //
     }
