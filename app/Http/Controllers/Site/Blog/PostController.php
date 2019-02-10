@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Site\Blog;
 
 use Illuminate\Http\Request;
 
-class BlogPostController extends BaseBlogController
+class PostController extends BaseBlogController
 {
     /**
      * Display a listing of the resource.
@@ -42,35 +42,33 @@ class BlogPostController extends BaseBlogController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(BlogPost $blogPost)
+    public function show($id)
     {
-        echo 'Показываем пост';
-        echo '<br>' . __METHOD__;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(BlogPost $blogPost)
+    public function edit($id)
     {
-        echo 'Форма редактирования поста';
-        echo '<br>' . __METHOD__;
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BlogPost $blogPost)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -78,10 +76,10 @@ class BlogPostController extends BaseBlogController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Blog\BlogPost  $blogPost
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogPost $blogPost)
+    public function destroy($id)
     {
         //
     }

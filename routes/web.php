@@ -3,22 +3,62 @@ Auth::routes();
 
 // Маршруты для основного сайта
 Route::get('/', 'Site\IndexController@index')->name('Main');
+
+
 Route::group(
     [
         'namespace' => 'Site',
         'as' => 'site.'
-    ],
-    function ()
+    ], function ()
+{
+    Route::group(
+        [
+            'namespace' => 'Blog',
+            'as' => 'blog.',
+            'prefix' => 'blog'
+        ], function ()
     {
-        // главная для блога
-        //Route::get('/blog', 'Blog\IndexController@index');
-
-        Route::resource('post', 'Blog\BlogPostController');
-    });
+        // Маршруты для блога на сайте
+        Route::get('', 'IndexController@index')->name('main');
+        Route::resource('post', 'PostController');
+        Route::resource('category', 'CategoryController');
+    }
+    );
+});
 
 
 // Маршруты для рабочей области Dashboard
+// Главная DASHBOARD
+Route::get('/dashboard', 'Dashboard\IndexController@index')->name('dashboard.main');
+Route::group(
+    [
+        'namespace' => 'Dashboard',
+        'as' => 'dashboard.',
+        'prefix' => 'dashboard'
+    ],
 
+    function ()
+    {
+        // Управление сайтами и доменами
+        Route::group([
+            'namespace' => 'Web',
+            'as' => 'web.',
+            'prefix' => 'web'
+        ], function (){
+
+            // Главная
+            Route::get('/', 'IndexController@index')->name('main');
+
+            // управление доменами
+            //Route::resource('domains', 'DomainController');
+
+            // управление сайтами
+            Route::resource('sites', 'SiteController');
+
+            // управление хостингами
+            Route::resource('hostings', 'HostingController');
+        });
+    });
 
 // Маршруты для админки
 Route::group(
@@ -45,7 +85,7 @@ Route::group(
         Route::resource('sites', 'WebSiteController');
 
         // Управление странами
-        Route::resource('countrys', 'CountryController');
+        Route::resource('country', 'CountryController');
 
         // Управление департаментами (отделами)
         Route::resource('departments', 'DepartmentController');
@@ -67,6 +107,8 @@ Route::group(
                 // управление постами
                 Route::resource('posts', 'PostController');
         });
+
+
 
     });
 

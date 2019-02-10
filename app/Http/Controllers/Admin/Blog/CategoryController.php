@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\Blog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CategoryController extends BaseBlogController
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class CategoryController extends BaseBlogController
      */
     public function index()
     {
-        echo __METHOD__;
+        $txt = 'АДМИНКА - Глвная для категорий';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +26,7 @@ class CategoryController extends BaseBlogController
      */
     public function create()
     {
-        echo __METHOD__;
+        //
     }
 
     /**
@@ -46,7 +48,7 @@ class CategoryController extends BaseBlogController
      */
     public function show($id)
     {
-        echo __METHOD__;
+        //
     }
 
     /**

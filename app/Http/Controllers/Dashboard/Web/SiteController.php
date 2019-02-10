@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Site\Blog;
+namespace App\Http\Controllers\Dashboard\Web;
 
+use App\Models\Web\WebSite;
 use Illuminate\Http\Request;
 
-class BlogCategoryController extends BaseBlogController
+class SiteController extends BaseWebController
 {
     /**
      * Display a listing of the resource.
@@ -40,10 +41,10 @@ class BlogCategoryController extends BaseBlogController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function show(BlogCategory $blogCategory)
+    public function show(WebSite $webSite)
     {
         //
     }
@@ -51,10 +52,10 @@ class BlogCategoryController extends BaseBlogController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function edit(BlogCategory $blogCategory)
+    public function edit(WebSite $webSite)
     {
         //
     }
@@ -63,10 +64,10 @@ class BlogCategoryController extends BaseBlogController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BlogCategory $blogCategory)
+    public function update(Request $request, WebSite $webSite)
     {
         //
     }
@@ -74,10 +75,10 @@ class BlogCategoryController extends BaseBlogController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Blog\BlogCategory  $blogCategory
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogCategory $blogCategory)
+    public function destroy(WebSite $webSite)
     {
         //
     }

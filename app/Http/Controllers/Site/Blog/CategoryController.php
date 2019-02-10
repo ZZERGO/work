@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard\Web;
+namespace App\Http\Controllers\Site\Blog;
 
-use App\Models\Web\WebSite;
 use Illuminate\Http\Request;
 
-class WebSiteController extends BaseWebController
+class CategoryController extends BaseBlogController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,9 @@ class WebSiteController extends BaseWebController
      */
     public function index()
     {
-        //
+        $txt = 'Глвная для категорий';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +25,9 @@ class WebSiteController extends BaseWebController
      */
     public function create()
     {
-        //
+        $txt = 'Форма создания категории';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -41,10 +44,10 @@ class WebSiteController extends BaseWebController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(WebSite $webSite)
+    public function show($id)
     {
         //
     }
@@ -52,10 +55,10 @@ class WebSiteController extends BaseWebController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(WebSite $webSite)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +67,10 @@ class WebSiteController extends BaseWebController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WebSite $webSite)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +78,10 @@ class WebSiteController extends BaseWebController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WebSite $webSite)
+    public function destroy($id)
     {
         //
     }
