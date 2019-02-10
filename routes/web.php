@@ -2,7 +2,7 @@
 Auth::routes();
 
 // Маршруты для основного сайта
-
+Route::get('/', 'Site\IndexController@index')->name('Main');
 Route::group(
     [
         'namespace' => 'Site',
