@@ -15,6 +15,7 @@ class WebDomainController extends BaseAdminController
     public function index()
     {
         echo 'управление доменами - главная';
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -25,6 +26,7 @@ class WebDomainController extends BaseAdminController
     public function create()
     {
         echo 'Управление доменами - форма создания домена';
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -47,6 +49,7 @@ class WebDomainController extends BaseAdminController
     public function show(WebDomain $webDomain)
     {
         echo 'уравление доменами - показать информацию о домене' . $webDomain->name;
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -58,6 +61,7 @@ class WebDomainController extends BaseAdminController
     public function edit(WebDomain $webDomain)
     {
         echo 'управление доменаи - форма редактирования домена' . $webDomain;
+        echo '</BR>' . __METHOD__;
     }
 
     /**

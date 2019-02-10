@@ -1,19 +1,26 @@
 <?php
-
+Auth::routes();
 
 // Маршруты для основного сайта
-Route::group(['namespace' => 'Site'], function (){
-    // для блога и статей
-    Route::get('/', 'IndexController@index' );
 
-    // для пользователей
-});
+Route::group(
+    [
+        'namespace' => 'Site',
+        'as' => 'site.'
+    ],
+    function ()
+    {
+        // главная для блога
+        //Route::get('/blog', 'Blog\IndexController@index');
+
+        Route::resource('post', 'Blog\BlogPostController');
+    });
 
 
 // Маршруты для рабочей области Dashboard
 
 
-// Маршруты для админка
+// Маршруты для админки
 Route::group(
     [
         'namespace' => 'Admin',
@@ -29,24 +36,41 @@ Route::group(
         Route::resource('user', 'UserController');
 
         // Управление доменами
-        Route::resource('domain','WebDomainController');
+        Route::resource('domains','WebDomainController');
 
         // Управление хостингами
-        Route::resource('hosting', 'WebHostingController');
+        Route::resource('hostings', 'WebHostingController');
 
         // Управление вебсайтами
-        Route::resource('website', 'WebSiteController');
+        Route::resource('sites', 'WebSiteController');
 
         // Управление странами
-        Route::resource('country', 'CountryController');
+        Route::resource('countrys', 'CountryController');
 
         // Управление департаментами (отделами)
-        Route::resource('department', 'DepartmentController');
+        Route::resource('departments', 'DepartmentController');
+
+        // Управление блогом
+        Route::group(
+            [
+                'namespace' => 'Blog',
+                'prefix' => 'blog',
+                'as' => 'blog.'
+            ], function(){
+
+                // Главная страница для управления блогом
+                Route::get('/', 'IndexBlogController@index')->name('Main');
+
+                // Управление категориями
+                Route::resource('category', 'CategoryController');
+
+                // управление постами
+                Route::resource('posts', 'PostController');
+        });
+
+    });
 
 
-});
-
-Auth::routes();
 
 
 

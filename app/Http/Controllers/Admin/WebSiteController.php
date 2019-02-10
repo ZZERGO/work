@@ -14,7 +14,7 @@ class WebSiteController extends BaseAdminController
      */
     public function index()
     {
-        //
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +24,7 @@ class WebSiteController extends BaseAdminController
      */
     public function create()
     {
-        //
+        echo '</BR>' . __METHOD__;
     }
 
     /**

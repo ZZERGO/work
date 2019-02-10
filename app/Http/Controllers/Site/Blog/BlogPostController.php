@@ -13,7 +13,8 @@ class BlogPostController extends BaseBlogController
      */
     public function index()
     {
-        //
+        echo 'Главная страница с постами';
+        echo '<br>' . __METHOD__;
     }
 
     /**
@@ -23,7 +24,8 @@ class BlogPostController extends BaseBlogController
      */
     public function create()
     {
-        //
+        echo 'Форма создания поста';
+        echo '<br>' . __METHOD__;
     }
 
     /**
@@ -45,7 +47,8 @@ class BlogPostController extends BaseBlogController
      */
     public function show(BlogPost $blogPost)
     {
-        //
+        echo 'Показываем пост';
+        echo '<br>' . __METHOD__;
     }
 
     /**
@@ -56,7 +59,8 @@ class BlogPostController extends BaseBlogController
      */
     public function edit(BlogPost $blogPost)
     {
-        //
+        echo 'Форма редактирования поста';
+        echo '<br>' . __METHOD__;
     }
 
     /**
