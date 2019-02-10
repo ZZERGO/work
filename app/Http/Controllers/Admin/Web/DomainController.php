@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Web;
 
+use App\Http\Controllers\Admin\BaseAdminController;
 use App\Models\Web\WebDomain;
 use Illuminate\Http\Request;
 
-class WebDomainController extends BaseAdminController
+class DomainController extends BaseAdminController
 {
     /**
      * Display a listing of the resource.

@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard\Web;
+namespace App\Http\Controllers\Admin\Web;
 
+use App\Http\Controllers\Admin\BaseAdminController;
+use App\Models\Web\WebSite;
 use Illuminate\Http\Request;
 
-class HostingController extends BaseWebController
+class SiteController extends BaseAdminController
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,7 @@ class HostingController extends BaseWebController
      */
     public function index()
     {
-        //
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -23,7 +25,7 @@ class HostingController extends BaseWebController
      */
     public function create()
     {
-        //
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -40,10 +42,10 @@ class HostingController extends BaseWebController
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(WebSite $webSite)
     {
         //
     }
@@ -51,10 +53,10 @@ class HostingController extends BaseWebController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(WebSite $webSite)
     {
         //
     }
@@ -63,10 +65,10 @@ class HostingController extends BaseWebController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, WebSite $webSite)
     {
         //
     }
@@ -74,10 +76,10 @@ class HostingController extends BaseWebController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Web\WebSite  $webSite
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(WebSite $webSite)
     {
         //
     }

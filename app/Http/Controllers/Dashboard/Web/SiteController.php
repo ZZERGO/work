@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Dashboard\Web;
 
-use App\Models\Web\WebSite;
 use Illuminate\Http\Request;
 
 class SiteController extends BaseWebController
@@ -41,10 +40,10 @@ class SiteController extends BaseWebController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(WebSite $webSite)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class SiteController extends BaseWebController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(WebSite $webSite)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class SiteController extends BaseWebController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WebSite $webSite)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class SiteController extends BaseWebController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WebSite $webSite)
+    public function destroy($id)
     {
         //
     }

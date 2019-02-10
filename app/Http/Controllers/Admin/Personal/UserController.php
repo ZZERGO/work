@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Personal;
 
-use App\Models\Department;
+use App\Http\Controllers\Admin\BaseAdminController;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class DepartmentController extends BaseAdminController
+class UserController extends BaseAdminController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class DepartmentController extends BaseAdminController
      */
     public function index()
     {
-        //
+        echo "админка USERS";
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +26,8 @@ class DepartmentController extends BaseAdminController
      */
     public function create()
     {
-        //
+        echo 'админка - форма создания пользователя';
+        echo '</BR>' . __METHOD__;
     }
 
     /**
@@ -41,33 +44,35 @@ class DepartmentController extends BaseAdminController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Department  $department
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Department $department)
+    public function show(User $user)
     {
-        //
+        echo 'админка - показываем данные пользователя' . ' - ' .$user->name;
+        echo '</BR>' . __METHOD__;
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Department  $department
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Department $department)
+    public function edit(User $user)
     {
-        //
+        echo 'админка - страница редактирования пользователя' . ' - ' .$user->name;
+        echo '</BR>' . __METHOD__;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Department  $department
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Department $department)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -75,10 +80,10 @@ class DepartmentController extends BaseAdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Department  $department
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Department $department)
+    public function destroy(User $user)
     {
         //
     }

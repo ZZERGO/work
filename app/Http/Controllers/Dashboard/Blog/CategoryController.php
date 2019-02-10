@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Dashboard\Blog;
 
-use App\Models\Web\WebSite;
 use Illuminate\Http\Request;
 
-class WebSiteController extends BaseAdminController
+class CategoryController extends BaseController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,9 @@ class WebSiteController extends BaseAdminController
      */
     public function index()
     {
-        echo '</BR>' . __METHOD__;
+        $txt = 'АДМИНКА - Глвная для категорий';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +25,7 @@ class WebSiteController extends BaseAdminController
      */
     public function create()
     {
-        echo '</BR>' . __METHOD__;
+        //
     }
 
     /**
@@ -41,10 +42,10 @@ class WebSiteController extends BaseAdminController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(WebSite $webSite)
+    public function show($id)
     {
         //
     }
@@ -52,10 +53,10 @@ class WebSiteController extends BaseAdminController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(WebSite $webSite)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +65,10 @@ class WebSiteController extends BaseAdminController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WebSite $webSite)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +76,10 @@ class WebSiteController extends BaseAdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Web\WebSite  $webSite
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WebSite $webSite)
+    public function destroy($id)
     {
         //
     }

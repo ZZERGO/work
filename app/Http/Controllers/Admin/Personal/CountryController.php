@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Personal;
 
-use App\Models\Web\WebHosting;
+use App\Http\Controllers\Admin\BaseAdminController;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
-class WebHostingController extends BaseAdminController
+class CountryController extends BaseAdminController
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class WebHostingController extends BaseAdminController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Web\WebHosting  $webHosting
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function show(WebHosting $webHosting)
+    public function show(Country $country)
     {
         //
     }
@@ -52,10 +53,10 @@ class WebHostingController extends BaseAdminController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Web\WebHosting  $webHosting
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function edit(WebHosting $webHosting)
+    public function edit(Country $country)
     {
         //
     }
@@ -64,10 +65,10 @@ class WebHostingController extends BaseAdminController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Web\WebHosting  $webHosting
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WebHosting $webHosting)
+    public function update(Request $request, Country $country)
     {
         //
     }
@@ -75,10 +76,10 @@ class WebHostingController extends BaseAdminController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Web\WebHosting  $webHosting
+     * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WebHosting $webHosting)
+    public function destroy(Country $country)
     {
         //
     }

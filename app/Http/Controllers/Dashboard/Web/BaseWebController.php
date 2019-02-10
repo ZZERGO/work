@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Dashboard\Web;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Dashboard\BaseDashboardController;
 
-class BaseWebController extends Controller
+class BaseWebController extends BaseDashboardController
 {
     //
 }

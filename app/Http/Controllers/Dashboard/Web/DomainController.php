@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Dashboard\Web;
 
-use App\Models\Web\WebDomain;
 use Illuminate\Http\Request;
 
 class DomainController extends BaseWebController
@@ -41,10 +40,10 @@ class DomainController extends BaseWebController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Web\WebDomain  $webDomain
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(WebDomain $webDomain)
+    public function show($id)
     {
         //
     }
@@ -52,10 +51,10 @@ class DomainController extends BaseWebController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Web\WebDomain  $webDomain
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(WebDomain $webDomain)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +63,10 @@ class DomainController extends BaseWebController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Web\WebDomain  $webDomain
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WebDomain $webDomain)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +74,10 @@ class DomainController extends BaseWebController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Web\WebDomain  $webDomain
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WebDomain $webDomain)
+    public function destroy($id)
     {
         //
     }

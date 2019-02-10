@@ -2,34 +2,31 @@
 Auth::routes();
 
 // Маршруты для основного сайта
-Route::get('/', 'Site\IndexController@index')->name('Main');
-
-
 Route::group(
     [
         'namespace' => 'Site',
         'as' => 'site.'
-    ], function ()
-{
-    Route::group(
-        [
-            'namespace' => 'Blog',
-            'as' => 'blog.',
-            'prefix' => 'blog'
-        ], function ()
+    ],
+    function ()
     {
+        // Главная страница сайта
+        Route::get('/', 'IndexController@index')->name('Main');
+
         // Маршруты для блога на сайте
-        Route::get('', 'IndexController@index')->name('main');
-        Route::resource('post', 'PostController');
-        Route::resource('category', 'CategoryController');
-    }
+        Route::group(
+            [
+                'namespace' => 'Blog',
+                'as' => 'blog.',
+            ],
+            function ()
+            {
+                Route::resource('post', 'PostController');
+                Route::resource('category', 'CategoryController');
+            }
     );
 });
 
-
 // Маршруты для рабочей области Dashboard
-// Главная DASHBOARD
-Route::get('/dashboard', 'Dashboard\IndexController@index')->name('dashboard.main');
 Route::group(
     [
         'namespace' => 'Dashboard',
@@ -39,25 +36,30 @@ Route::group(
 
     function ()
     {
-        // Управление сайтами и доменами
-        Route::group([
-            'namespace' => 'Web',
-            'as' => 'web.',
-            'prefix' => 'web'
-        ], function (){
+        // Главная DASHBOARD
+        Route::get('/', 'IndexController@index')->name('main');
 
-            // Главная
-            Route::get('/', 'IndexController@index')->name('main');
+        // Управление доменами, сайтами и хостингами
+        Route::group(
+            [
+                'namespace' => 'Web',
+                'as' => 'web.',
+                'prefix' => 'web'
+            ],
+            function () {
 
-            // управление доменами
-            //Route::resource('domains', 'DomainController');
+                // Главная
+                Route::get('/', 'IndexController@index')->name('main');
 
-            // управление сайтами
-            Route::resource('sites', 'SiteController');
+                // управление доменами
+                Route::resource('domains', 'DomainController');
 
-            // управление хостингами
-            Route::resource('hostings', 'HostingController');
-        });
+                // управление сайтами
+                Route::resource('sites', 'SiteController');
+
+                // управление хостингами
+                Route::resource('hostings', 'HostingController');
+            });
     });
 
 // Маршруты для админки
