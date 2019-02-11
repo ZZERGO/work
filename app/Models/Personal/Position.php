@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Personal;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Department extends Model
+class Position extends Model
 {
     //
 }

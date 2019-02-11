@@ -23,6 +23,6 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert($user);
 
         // запустим фабрику пользователей
-        factory(\App\Models\User::class, 'admin', 10)->create();
+        factory(\App\Models\Personal\User::class, 'admin', 10)->create();
     }
 }

@@ -10,7 +10,7 @@ Route::group(
     function ()
     {
         // Главная страница сайта
-        Route::get('/', 'IndexController@index')->name('Main');
+        Route::get('/', 'IndexController@index')->name('main');
 
         // Маршруты для блога на сайте
         Route::group(

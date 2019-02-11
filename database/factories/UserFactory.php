@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
+$factory->define(\App\Models\Personal\User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
@@ -24,7 +24,7 @@ $factory->define(App\User::class, function (Faker $faker) {
     ];
 });
 
-$factory->defineAs(\App\Models\User::class, 'admin', function (Faker $faker){
+$factory->defineAs(\App\Models\Personal\User::class, 'admin', function (Faker $faker){
     $faker = \Faker\Factory::create('ru_RU');
 
     $gender = $faker->randomElements(['male', 'female'])[0];

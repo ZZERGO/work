@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Site;
 
-use App\Models\User;
+use App\Models\Personal\User;
 
 class IndexController extends BaseSiteController
 {

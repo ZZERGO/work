@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Personal;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
