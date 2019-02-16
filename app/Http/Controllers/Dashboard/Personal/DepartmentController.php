@@ -14,7 +14,9 @@ class DepartmentController extends BasePersonalController
      */
     public function index()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Отделы';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +26,9 @@ class DepartmentController extends BasePersonalController
      */
     public function create()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Отделы - Форма создания';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -44,9 +48,11 @@ class DepartmentController extends BasePersonalController
      * @param  \App\Models\Department  $departments
      * @return \Illuminate\Http\Response
      */
-    public function show(Department $departments)
+    public function show($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Отдел c id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -55,9 +61,11 @@ class DepartmentController extends BasePersonalController
      * @param  \App\Models\Department  $departments
      * @return \Illuminate\Http\Response
      */
-    public function edit(Department $departments)
+    public function edit($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Редактирование Отдела с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**

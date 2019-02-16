@@ -14,7 +14,9 @@ class PositionController extends BasePersonalController
      */
     public function index()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Должности';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +26,9 @@ class PositionController extends BasePersonalController
      */
     public function create()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Должности - Создание';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -44,9 +48,11 @@ class PositionController extends BasePersonalController
      * @param  \App\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function show(Position $position)
+    public function show($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Должность с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -55,9 +61,11 @@ class PositionController extends BasePersonalController
      * @param  \App\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function edit(Position $position)
+    public function edit($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Редактирование должности с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
