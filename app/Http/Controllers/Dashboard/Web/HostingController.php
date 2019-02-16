@@ -13,7 +13,9 @@ class HostingController extends BaseWebController
      */
     public function index()
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Хостинги';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -23,7 +25,9 @@ class HostingController extends BaseWebController
      */
     public function create()
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Хостинги - форма создания';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -45,7 +49,9 @@ class HostingController extends BaseWebController
      */
     public function show($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Хостинги - хостинг с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -56,7 +62,9 @@ class HostingController extends BaseWebController
      */
     public function edit($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Хостинги - редактируем хостинг с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**

@@ -13,7 +13,9 @@ class SiteController extends BaseWebController
      */
     public function index()
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Сайты';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -23,7 +25,9 @@ class SiteController extends BaseWebController
      */
     public function create()
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Сайты - форма создания';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -45,7 +49,9 @@ class SiteController extends BaseWebController
      */
     public function show($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Сайты - информация о сайте с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -56,7 +62,9 @@ class SiteController extends BaseWebController
      */
     public function edit($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление WWW - Сайты - форма редактирования сайта с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**

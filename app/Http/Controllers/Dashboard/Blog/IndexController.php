@@ -7,6 +7,8 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        echo 'DASHBOARD - Управление блогом - Главная ';
+        $txt = 'DASHBOARD - Управление блогом - Главная';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 }
