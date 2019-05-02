@@ -13,7 +13,7 @@ class CategoryController extends BaseController
      */
     public function index()
     {
-        $txt = 'АДМИНКА - Глвная для категорий';
+        $txt = 'DASHBOARD - Управление блогом - Категории';
         echo '<b>' .$txt. '</b>';
         echo '</BR></BR>' . __METHOD__;
     }
@@ -25,7 +25,9 @@ class CategoryController extends BaseController
      */
     public function create()
     {
-        //
+        $txt = 'DASHBOARD - Управление блогом - форма создания категории';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -47,7 +49,9 @@ class CategoryController extends BaseController
      */
     public function show($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление блогом - Информация о категории c ID='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -58,7 +62,9 @@ class CategoryController extends BaseController
      */
     public function edit($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление блогом - Редактируем категорию с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**

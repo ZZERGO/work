@@ -14,7 +14,9 @@ class CountryController extends BasePersonalController
      */
     public function index()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Страны';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -24,7 +26,9 @@ class CountryController extends BasePersonalController
      */
     public function create()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Страны - Форма создания';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -44,9 +48,11 @@ class CountryController extends BasePersonalController
      * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function show(Country $country)
+    public function show($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Страна с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -55,9 +61,11 @@ class CountryController extends BasePersonalController
      * @param  \App\Models\Country  $country
      * @return \Illuminate\Http\Response
      */
-    public function edit(Country $country)
+    public function edit($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Редактирование Страны с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**

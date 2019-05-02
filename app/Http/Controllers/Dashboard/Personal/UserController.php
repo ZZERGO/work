@@ -13,7 +13,9 @@ class UserController extends BasePersonalController
      */
     public function index()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Пользователи';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -23,7 +25,9 @@ class UserController extends BasePersonalController
      */
     public function create()
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Форма создания';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -45,7 +49,9 @@ class UserController extends BasePersonalController
      */
     public function show($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Пользователь с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -56,7 +62,9 @@ class UserController extends BasePersonalController
      */
     public function edit($id)
     {
-        //
+        $txt = 'DASHBOARD - Управление персоналом - Редактирование пользователя с id'.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**

@@ -13,7 +13,9 @@ class PostController extends BaseController
      */
     public function index()
     {
-        echo __METHOD__;
+        $txt = 'DASHBOARD - Управление блогом - Все Посты';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -23,7 +25,9 @@ class PostController extends BaseController
      */
     public function create()
     {
-        echo __METHOD__;
+        $txt = 'DASHBOARD - Управление блогом - Форма создания поста';
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -45,7 +49,9 @@ class PostController extends BaseController
      */
     public function show($id)
     {
-        echo __METHOD__;
+        $txt = 'DASHBOARD - Управление блогом - Посты - id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
@@ -56,7 +62,9 @@ class PostController extends BaseController
      */
     public function edit($id)
     {
-        echo __METHOD__;
+        $txt = 'DASHBOARD - Управление блогом - Посты - Редактируем пост с id='.$id;
+        echo '<b>' .$txt. '</b>';
+        echo '</BR></BR>' . __METHOD__;
     }
 
     /**
