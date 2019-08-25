@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Http\Controllers\Site\Blog\CategoryController;
+use App\Models\Blog\BlogPost;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,6 +16,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        //BlogPost::observe(BlogPost::class);
+        //BlogPost::observe(BlogPost::class);
     }
 
     /**
