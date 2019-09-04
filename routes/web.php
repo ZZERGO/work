@@ -99,15 +99,38 @@ Route::group(
     [
         'namespace' => 'Admin',
         'prefix' => 'admin',
-        'as' => 'admin.'
+        'as' => 'Admin.'
     ],
     function(){
 
         // Главная страница админки
         Route::get('/', 'IndexController@index')->name('Main');
 
-        // Управление пользователями
-        Route::resource('users', 'Personal\UserController');
+            //Управление сайтами и доменами
+            Route::group([
+                'namespace' => 'Web',
+                'prefix' => 'web',
+                'as' => 'Web.'
+            ], function (){
+                Route::get('/', 'MainController@index')->name('Main');
+            });
+
+            // Управление пользователями
+            Route::group(
+                [
+                    'namespace' => 'Personal',
+                    'prefix' => 'users',
+                    'as' => 'Personal.'
+                ], function (){
+                    Route::get('/', 'UserController@index')->name('Main');
+            });
+
+
+
+
+
+
+
 
         // Управление доменами
         Route::resource('domains','Web\DomainController');
@@ -130,7 +153,9 @@ Route::group(
                 'namespace' => 'Blog',
                 'prefix' => 'blog',
                 'as' => 'blog.'
-            ], function(){
+            ],
+            function()
+            {
 
                 // Главная страница для управления блогом
                 Route::get('/', 'IndexBlogController@index')->name('Main');
@@ -140,7 +165,7 @@ Route::group(
 
                 // управление постами
                 Route::resource('posts', 'PostController');
-        });
+             });
 
 
 

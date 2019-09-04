@@ -14,7 +14,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        // Главная страница
+        return  view('admin.personal',[
+            'title' => 'Управление персоналом',
+        ]);
     }
 
     /**
