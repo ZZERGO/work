@@ -101,77 +101,63 @@ Route::group(
         'prefix' => 'admin',
         'as' => 'Admin.'
     ],
-    function(){
+    function() {
 
         // Главная страница админки
         Route::get('/', 'IndexController@index')->name('Main');
 
-            //Управление сайтами и доменами
-            Route::group([
-                'namespace' => 'Web',
-                'prefix' => 'web',
-                'as' => 'Web.'
+        //Управление сайтами и доменами
+        Route::group(
+            [
+            'namespace' => 'Web',
+            'prefix' => 'web',
+            'as' => 'Web.'
             ], function (){
-                Route::get('/', 'MainController@index')->name('Main');
-            });
+            Route::get('/', 'MainController@index')->name('Main');
 
-            // Управление пользователями
-            Route::group(
-                [
-                    'namespace' => 'Personal',
-                    'prefix' => 'users',
-                    'as' => 'Personal.'
-                ], function (){
-                    Route::get('/', 'UserController@index')->name('Main');
-            });
+            // Управление доменами
+            Route::resource('domains', 'DomainController');
 
+            // Управление хостингами
+            Route::resource('hostings', 'HostingController');
 
+            // Управление вебсайтами
+            Route::resource('sites', 'SiteController');
+        });
 
+        // Управление пользователями
+        Route::group(
+            [
+                'namespace' => 'Personal',
+                'prefix' => 'users',
+                'as' => 'Personal.'
+            ], function () {
+            Route::get('/', 'UserController@index')->name('Main');
 
+            // Управление странами
+            Route::resource('country', 'CountryController');
 
-
-
-
-        // Управление доменами
-        Route::resource('domains','Web\DomainController');
-
-        // Управление хостингами
-        Route::resource('hostings', 'Web\HostingController');
-
-        // Управление вебсайтами
-        Route::resource('sites', 'Web\SiteController');
-
-        // Управление странами
-        Route::resource('country', 'Personal\CountryController');
-
-        // Управление департаментами (отделами)
-        Route::resource('departments', 'Personal\DepartmentController');
+            // Управление департаментами (отделами)
+            Route::resource('departments', 'DepartmentController');
+        });
 
         // Управление блогом
         Route::group(
             [
                 'namespace' => 'Blog',
                 'prefix' => 'blog',
-                'as' => 'blog.'
+                'as' => 'Blog.'
             ],
-            function()
-            {
+            function () {
 
                 // Главная страница для управления блогом
-                Route::get('/', 'IndexBlogController@index')->name('Main');
+                Route::get('/', 'MainController@index')->name('Main');
 
                 // Управление категориями
                 Route::resource('category', 'CategoryController');
 
                 // управление постами
                 Route::resource('posts', 'PostController');
-             });
-
-
+            });
 
     });
-
-
-
-
-
