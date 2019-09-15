@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class BlogCategoryTableSeeder extends Seeder
 {
@@ -16,7 +17,7 @@ class BlogCategoryTableSeeder extends Seeder
 
         $categories[0] = [
             'title' => $cName,
-            'slug' => str_slug($cName),
+            'slug' => Str::slug($cName),
             'parent_id' => 0
         ];
 
@@ -26,7 +27,7 @@ class BlogCategoryTableSeeder extends Seeder
 
             $categories[$i] = [
                 'title' => "Категория #" . $i,
-                'slug' => str_slug($cName),
+                'slug' => Str::slug($cName),
                 'parent_id' => $parent_id
             ];
         }

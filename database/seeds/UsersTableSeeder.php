@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class UsersTableSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@work.local',
             'email_verified_at' => now(),
             'password' => bcrypt('123123'),
-            'remember_token' => str_random(10),
+            'remember_token' => Str::random(10),
             'is_active' => '1',
         ];
         DB::table('users')->insert($user);
