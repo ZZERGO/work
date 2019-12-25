@@ -129,16 +129,19 @@ Route::group(
         Route::group(
             [
                 'namespace' => 'Personal',
-                'prefix' => 'users',
+                'prefix' => 'hr',
                 'as' => 'Personal.'
             ], function () {
             Route::get('/', 'UserController@index')->name('Main');
 
             // Управление странами
-            Route::resource('country', 'CountryController');
+            Route::resource('countries', 'CountryController');
 
             // Управление департаментами (отделами)
             Route::resource('departments', 'DepartmentController');
+
+            // Список сотрудников
+            Route::resource('users', 'UserController');
         });
 
         // Управление блогом
